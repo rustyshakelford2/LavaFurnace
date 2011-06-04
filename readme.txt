@@ -36,6 +36,11 @@ in the pit...
 
 From the top down...
 
+			 * O = Obsidian
+			 * A = Air
+			 * G = Glass
+			 * S = Sign
+			 * 
 			 * Level 1 (Sign Level)
 			 *    S
 			 *   OOO
@@ -123,6 +128,9 @@ LavaFurnace.player.use                     <- can only use a lava furnace they c
 ***************************
 Final notes:
 ***************************
+
+Permissions are not required, the plugin will default over to Server OPs if GroupManager or niji based permissions are not detected.
+Server OPs trumps permissions. So if you have both OPs and Permissions then the Server OPs are Admins in the eyes of the plugin.
 
 Here are a few things to remember with the lava furnace. Depending on permissions a lava furnace can only be destroyed by
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
