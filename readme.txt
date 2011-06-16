@@ -1,5 +1,5 @@
-Lava Furnace 1.0 plugin 
-		For Bukkit Minecraft server version 803.
+Lava Furnace 1.2 plugin 
+		For Bukkit Minecraft server version 818.
 by ArcWolf
 		
 ***************************
@@ -41,33 +41,32 @@ From the top down...
 			 * G = Glass
 			 * S = Sign
 			 * 
-			 * Level 1 (Sign Level)
-			 *    S
-			 *   OOO
-			 *   GAA
-			 *   OOO
-			 * 
-			
+			 *  Level 1 (Sign Level)
+			 *     S
+			 *    OOO
+			 *    GAA
+			 *    OOO
+			 * 		
 			 * C = Cobblestone Stairs ascending toward the obsidian
 			 * O = Obsidian
 			 * A = Air
 			 * F = Furnace
+			 * H = Chest (optional)
 			 * 
 			 *  Level 2 (furnace Level)
-			 *    CCC
+			 *   HCACH
 			 *   COOOC
 			 *   COAOC
 			 *   COFOC
-			 *    CAC
+			 *    CCC
 			 * 
-
 			 * 
 			 * O = Obsidian
 			 * 
-			 * Level 3 (base level)
-			 * OOO
-			 * OOO
-			 * OOO
+			 *  Level 3 (base level)
+			 *    OOO
+			 *    OOO
+			 *    OOO
 			 * 
 The basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the 
 end of the U shaped obsidan square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
@@ -78,6 +77,18 @@ sign text will turn white.
 
 If that happens you can now fill the crucible with lava. The glass door will move over the lava and the furnace will ignite and become ready to
 smelt items.
+
+(Optional)
+New in version 1.2 are the production chests. These chests are optional addons to the lavafurnace.
+If a user has permission and the server has this function enabled you may place a chest to either
+side of the furnace per the example above. The Chest to the direct left of the furnace is the
+supply chest. All valid ores and smeltable items can be placed into this chest. The chest to the
+direct right of the furnace is the output chest. All smelted or processed items are placed inside
+this chest when the furnace completes its processing.
+
+*Note: Only 1 SMALL chest on each side. The furnace does not use large chests although it will 
+still protect them with permissions. It will not use the extra capacity of a large chest. The magic
+of the furnace does not extend far enough beyond the boundaries of the furnace. Keep that in mind.
 
 ***************************
 Config File:
@@ -100,15 +111,22 @@ max_player_furnaces=
 (a value from 0 to a really REALLY big number is accepted here.)
 (this value is used to determine how many lava furnaces a player may own)
 
+allow_production_chests=
+(this accepts either true or false values)
+(True enables production chests)
+
 Debug=
 (a value of 1 allows users to put lava blocks into the furnace for power)
 (1 is mainly for testing or cheating your choice. 2 & 3 are for debugging info in the console. 2 for creating, 3 for deleting)
+(4 is for permissions checks)
+(5 is to show exceptions traps)
 
 
 ***************************
 Permissions
 ***************************
 *note* case sensitive these must be entered EXACTLY as they are here
+*note* permissions are not required, the plugin will default to OPs if no permissions are detected
 
 LavaFurnace.admin.maxForgeOverride         <- overrides the max forge limit for admin or player
 
@@ -124,13 +142,11 @@ LavaFurnace.player.destroy                 <- can only destroy their own lava fu
 LavaFurnace.admin.use                      <- can use any lava furnace
 LavaFurnace.player.use                     <- can only use a lava furnace they create
 
+LavaFurnace.chest                          <- can place production chests limited by config
 
 ***************************
 Final notes:
 ***************************
-
-Permissions are not required, the plugin will default over to Server OPs if GroupManager or niji based permissions are not detected.
-Server OPs trumps permissions. So if you have both OPs and Permissions then the Server OPs are Admins in the eyes of the plugin.
 
 Here are a few things to remember with the lava furnace. Depending on permissions a lava furnace can only be destroyed by
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
@@ -139,6 +155,9 @@ the furnace will erase.
 However, there are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
 directly. Either a TNT explosion or a CREEPER explosion. There may be another dealing with water but I never tested that.
 So just be sure to keep explosives and water away from the furnace and you will be OK. The magic is finicky like that.
+
+Permissions are not required, the plugin will default over to Server OPs if GroupManager or niji based permissions are not detected.
+Server OPs trumps permissions. So if you have both OPs and Permissions then the Server OPs are Admins in the eyes of the plugin.
 
 Never directly edit the LavaFurnace Data base. Bad things can happen!
 
