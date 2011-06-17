@@ -55,9 +55,9 @@ From the top down...
 			 * 
 			 *  Level 2 (furnace Level)
 			 *   HCACH
-			 *   COOOC
-			 *   COAOC
 			 *   COFOC
+			 *   COAOC
+			 *   COOOC
 			 *    CCC
 			 * 
 			 * 
