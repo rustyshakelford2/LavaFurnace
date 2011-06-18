@@ -1,5 +1,5 @@
 Lava Furnace 1.2 plugin 
-		For Bukkit Minecraft server version 818.
+		For Bukkit Minecraft server version 860.
 by ArcWolf
 		
 ***************************
@@ -117,7 +117,7 @@ allow_production_chests=
 
 Debug=
 (a value of 1 allows users to put lava blocks into the furnace for power)
-(1 is mainly for testing or cheating your choice. 2 & 3 are for debugging info in the console. 2 for creating, 3 for deleting)
+(1 is mainly for testing or cheating your choice. 2 & 3 are for debugging info in the console. 3 for creating, 2 for deleting)
 (4 is for permissions checks)
 (5 is to show exceptions traps)
 
