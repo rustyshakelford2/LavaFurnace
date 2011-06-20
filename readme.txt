@@ -1,4 +1,4 @@
-Lava Furnace 1.2 plugin 
+Lava Furnace 1.2b plugin 
 		For Bukkit Minecraft server version 860.
 by ArcWolf
 		
@@ -115,6 +115,10 @@ allow_production_chests=
 (this accepts either true or false values)
 (True enables production chests)
 
+allow_freeforall=
+(this accepts either true or false values)
+(True will disable LavaFurnace permissions checks entirely)
+
 Debug=
 (a value of 1 allows users to put lava blocks into the furnace for power)
 (1 is mainly for testing or cheating your choice. 2 & 3 are for debugging info in the console. 3 for creating, 2 for deleting)
@@ -127,6 +131,7 @@ Permissions
 ***************************
 *note* case sensitive these must be entered EXACTLY as they are here
 *note* permissions are not required, the plugin will default to OPs if no permissions are detected
+*note* permission checks can be turned off with allow_freeforall=true in the config
 
 LavaFurnace.admin.maxForgeOverride         <- overrides the max forge limit for admin or player
 
@@ -163,6 +168,9 @@ Never directly edit the LavaFurnace Data base. Bad things can happen!
 
 If something gets messed up with any of the data files. Delete the LavaFurnace directory and Lava Furnace plugin will recreate
 everything to default values.
+
+If you dont use permissions and dont want to mess with OPS then you may disabled LavaFurnace permissions checks entirely with
+the allow_freeforall option in the config. Set it to true will allow anyone to create, use, fuel, and destroy any LavaFurnace.
 
 Keep all that in mind and you will be a happy owner of a fancy Lava Furnace!
 
