@@ -1,5 +1,5 @@
-Lava Furnace 1.2b plugin 
-		For Bukkit Minecraft server version 860.
+Lava Furnace 1.3 plugin 
+		For Bukkit Minecraft server version 935.
 by ArcWolf
 		
 ***************************
@@ -24,7 +24,7 @@ Commands:
 There are not commands really. (well, just the sign... but we'll get to that later)
 
 ***************************
-How to build:
+How to build: (default config)
 ***************************
 
 I recommend checking out the YouTube tutorial I quickly threw together. Check it out here:
@@ -54,7 +54,7 @@ From the top down...
 			 * H = Chest (optional)
 			 * 
 			 *  Level 2 (furnace Level)
-			 *   HCACH
+			 *  HHCACHH
 			 *   COFOC
 			 *   COAOC
 			 *   COOOC
@@ -68,7 +68,7 @@ From the top down...
 			 *    OOO
 			 *    OOO
 			 * 
-The basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the 
+Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the 
 end of the U shaped obsidan square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
 Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x lines you just created. It 
 must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place a sign attached to the obsidian block above the 
@@ -78,17 +78,23 @@ sign text will turn white.
 If that happens you can now fill the crucible with lava. The glass door will move over the lava and the furnace will ignite and become ready to
 smelt items.
 
+*Note*
+Contact your system admin for your lavafurnce building requirements.
+
 (Optional)
+New in version 1.3 is the ability to customize what blocks your furnace uses for construction. Valid blocks are in 
+a seperate file located in the zip file this plugin came in.
+Lava Furnace will use large production chests if turned on in config.
+If you set a cook time faster then normal. Then you can not use alternate fuels in the furnace as still recieve the enhanced cook time.
+IE. If you set cook time to 4x as fast and put coal into the lava furnace. You will only get normal cook times. Remove the coal. 4x as fast cook time.
+Capitilization of the permissions nodes have been removed. Please make the necessary changes. LavaFurnace should now be lavafurnace.
+
 New in version 1.2 are the production chests. These chests are optional addons to the lavafurnace.
 If a user has permission and the server has this function enabled you may place a chest to either
 side of the furnace per the example above. The Chest to the direct left of the furnace is the
 supply chest. All valid ores and smeltable items can be placed into this chest. The chest to the
 direct right of the furnace is the output chest. All smelted or processed items are placed inside
 this chest when the furnace completes its processing.
-
-*Note: Only 1 SMALL chest on each side. The furnace does not use large chests although it will 
-still protect them with permissions. It will not use the extra capacity of a large chest. The magic
-of the furnace does not extend far enough beyond the boundaries of the furnace. Keep that in mind.
 
 ***************************
 Config File:
@@ -99,8 +105,12 @@ The config file defaults are set up for balance right now. However, if you want 
 
 lava_furnace_timer=
 (pretty self explanatory really, it is default set at 20000 which is nearly identical to a lavabucket being burned in a furnace)
-(it accepts values from 1 to 32767  1 being ridiculously fast and 32767 being nearly 2x as long as a lava bucket burning I think)
+(it accepts values from 1 to 2147483647  1 being ridiculously fast and 2147483647 being nearly 7 years real time)
 (The lava in the crucible will decrease as set intervals based on how much time is left on the furnace)
+
+cook_timer=
+(this accepts a value from 1 to 4)
+(1 is normal cook time, 4 is 4x faster then normal)
 
 infinite_lava=
 (this accepts either true or false values)
@@ -119,11 +129,35 @@ allow_freeforall=
 (this accepts either true or false values)
 (True will disable LavaFurnace permissions checks entirely)
 
+allow_freeforall_chests=
+(this accepts either true or false values)
+(True will disable LavaFurnace permissions checks for opening chests only)
+
+use_large_chests=
+(this accepts either true or false values)
+(if set to true lavafurnace will use large chest capacity)
+
+layer_one_blocks=
+(this accepts defined valid block types for the top most layer of the furnace)
+
+layer_two_blocks=
+(this accepts defined valid block types for the second layer of the furnace)
+
+layer_three_blocks=
+(this accepts defined valid block types for the bottom layer of the furnace)
+
+belt_blocks=
+(this accepts defined valid block types for the belt that runs around the middle of the furnace)
+
+door_block=
+(this accepts defined valid block types for the crucible door of the furnace)
+
 Debug=
-(a value of 1 allows users to put lava blocks into the furnace for power)
+(a value of 1 allows users to put lava blocks into the furnace for power, permissions node is listed below)
 (1 is mainly for testing or cheating your choice. 2 & 3 are for debugging info in the console. 3 for creating, 2 for deleting)
 (4 is for permissions checks)
 (5 is to show exceptions traps)
+(6 is for detailed building debugging *requires admin build permissions)
 
 
 ***************************
@@ -133,21 +167,24 @@ Permissions
 *note* permissions are not required, the plugin will default to OPs if no permissions are detected
 *note* permission checks can be turned off with allow_freeforall=true in the config
 
-LavaFurnace.admin.maxForgeOverride         <- overrides the max forge limit for admin or player
+lavafurnace.admin.maxForgeOverride         <- overrides the max forge limit for admin or player
 
-LavaFurnace.player.build                   <- Can build lava furnace
-LavaFurnace.admin.build                    <- Can build lava furnace
+lavafurnace.player.build                   <- Can build lava furnace
+lavafurnace.admin.build                    <- Can build lava furnace
 
-LavaFurnace.admin.fuel                     <- can fuel any lava furnace... 
-LavaFurnace.player.fuel                    <- can fuel only their own lava furnace... 
+lavafurnace.admin.fuel                     <- can fuel any lava furnace... 
+lavafurnace.player.fuel                    <- can fuel only their own lava furnace... 
 
-LavaFurnace.admin.destroy                  <- can destroy any lava furnace...
-LavaFurnace.player.destroy                 <- can only destroy their own lava furnace...
+lavafurnace.admin.lavablockfuel            <- can fuel any lava furnace...
+lavafurnace.player.lavablockfuel           <- can fuel only their own lava furnace...
 
-LavaFurnace.admin.use                      <- can use any lava furnace
-LavaFurnace.player.use                     <- can only use a lava furnace they create
+lavafurnace.admin.destroy                  <- can destroy any lava furnace...
+lavafurnace.player.destroy                 <- can only destroy their own lava furnace...
 
-LavaFurnace.chest                          <- can place production chests limited by config
+lavafurnace.admin.use                      <- can use any lava furnace
+lavafurnace.player.use                     <- can only use a lava furnace they create
+
+lavafurnace.chest                          <- can place production chests limited by config
 
 ***************************
 Final notes:
@@ -171,6 +208,15 @@ everything to default values.
 
 If you dont use permissions and dont want to mess with OPS then you may disabled LavaFurnace permissions checks entirely with
 the allow_freeforall option in the config. Set it to true will allow anyone to create, use, fuel, and destroy any LavaFurnace.
+
+Even if you choose to totally remove the belt around the furnace via the config the Production chests still need to be placed
+1 block down and 2 blocks to the right and left of the sign for each furnace.
+
+If you choose to disable the belt around the furnace then anything placed where the belt used to be will be ignored by the furnace
+detection methods.
+
+Only the blocks defined in the config constitute a valid furnace. If a furnace was created with some other block setup then
+that furnace will be invalid if the blocks are changed in the config.
 
 Keep all that in mind and you will be a happy owner of a fancy Lava Furnace!
 
