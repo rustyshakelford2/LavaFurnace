@@ -1,4 +1,4 @@
-Lava Furnace 1.3 plugin 
+Lava Furnace 1.35 plugin 
 		For Bukkit Minecraft server version 935.
 by ArcWolf
 		
@@ -53,11 +53,11 @@ From the top down...
 			 * F = Furnace
 			 * H = Chest (optional)
 			 * 
-			 *  Level 2 (furnace Level)
-			 *  HHCACHH
-			 *   COFOC
-			 *   COAOC
-			 *   COOOC
+			 *  Level 2 (furnace Level)             (optional: with belt blocks off)
+			 *  HHCACHH                               HHAHH
+			 *   COFOC                                 OFO
+			 *   COAOC                                 OAO
+			 *   COOOC                                 OOO
 			 *    CCC
 			 * 
 			 * 
@@ -82,6 +82,9 @@ smelt items.
 Contact your system admin for your lavafurnce building requirements.
 
 (Optional)
+Version 1.35 allows production chests to be placed closer to the furnace block if belt blocks are set to 0 in the config(ie. turned off)
+Example above.
+
 New in version 1.3 is the ability to customize what blocks your furnace uses for construction. Valid blocks are in 
 a seperate file located in the zip file this plugin came in.
 Lava Furnace will use large production chests if turned on in config.
@@ -91,7 +94,7 @@ Capitilization of the permissions nodes have been removed. Please make the neces
 
 New in version 1.2 are the production chests. These chests are optional addons to the lavafurnace.
 If a user has permission and the server has this function enabled you may place a chest to either
-side of the furnace per the example above. The Chest to the direct left of the furnace is the
+side of the furnace per the examples above. The Chest to the direct left of the furnace is the
 supply chest. All valid ores and smeltable items can be placed into this chest. The chest to the
 direct right of the furnace is the output chest. All smelted or processed items are placed inside
 this chest when the furnace completes its processing.
@@ -136,6 +139,11 @@ allow_freeforall_chests=
 use_large_chests=
 (this accepts either true or false values)
 (if set to true lavafurnace will use large chest capacity)
+
+explosion_proof=
+(this accepts either true or false values)
+(if set to true the furnace can not be damaged by explosions)
+(Protection in a 7 block radious from the center of the furnace)
 
 layer_one_blocks=
 (this accepts defined valid block types for the top most layer of the furnace)
@@ -195,8 +203,8 @@ its owner. If any part of the lava furnace is broke the crucible will empty and 
 the furnace will erase. 
 
 However, there are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
-directly. Either a TNT explosion or a CREEPER explosion. There may be another dealing with water but I never tested that.
-So just be sure to keep explosives and water away from the furnace and you will be OK. The magic is finicky like that.
+directly. Water and Piston push or pulling at a furnace block.
+So just be sure to keep water and pistons away from the furnace and you will be OK.
 
 Permissions are not required, the plugin will default over to Server OPs if GroupManager or niji based permissions are not detected.
 Server OPs trumps permissions. So if you have both OPs and Permissions then the Server OPs are Admins in the eyes of the plugin.
@@ -209,8 +217,8 @@ everything to default values.
 If you dont use permissions and dont want to mess with OPS then you may disabled LavaFurnace permissions checks entirely with
 the allow_freeforall option in the config. Set it to true will allow anyone to create, use, fuel, and destroy any LavaFurnace.
 
-Even if you choose to totally remove the belt around the furnace via the config the Production chests still need to be placed
-1 block down and 2 blocks to the right and left of the sign for each furnace.
+Production chests can be placed closer to the furnace if the belt blocks are turned off. They will also work in the default
+configuration if the belt blocks are turned off. See the example construction above.
 
 If you choose to disable the belt around the furnace then anything placed where the belt used to be will be ignored by the furnace
 detection methods.
