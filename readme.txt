@@ -1,5 +1,5 @@
-Lava Furnace 1.35 plugin 
-		For Bukkit Minecraft server version 935.
+Lava Furnace 1.371 plugin 
+		For Bukkit Minecraft server version 953.
 by ArcWolf
 		
 ***************************
@@ -108,7 +108,7 @@ The config file defaults are set up for balance right now. However, if you want 
 
 lava_furnace_timer=
 (pretty self explanatory really, it is default set at 20000 which is nearly identical to a lavabucket being burned in a furnace)
-(it accepts values from 1 to 2147483647  1 being ridiculously fast and 2147483647 being nearly 7 years real time)
+(it accepts values from 1 to 2147483647  1 being ridiculously fast and 2147483647 being nearly 3 and a half years real time)
 (The lava in the crucible will decrease as set intervals based on how much time is left on the furnace)
 
 cook_timer=
