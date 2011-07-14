@@ -1,4 +1,4 @@
-Lava Furnace 1.371 plugin 
+Lava Furnace 1.373 plugin 
 		For Bukkit Minecraft server version 953.
 by ArcWolf
 		
