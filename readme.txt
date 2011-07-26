@@ -1,5 +1,5 @@
-Lava Furnace 1.373 plugin 
-		For Bukkit Minecraft server version 953.
+Lava Furnace 1.38 plugin 
+		For Bukkit Minecraft server version 1000.
 by ArcWolf
 		
 ***************************
@@ -145,6 +145,10 @@ explosion_proof=
 (if set to true the furnace can not be damaged by explosions)
 (Protection in a 7 block radious from the center of the furnace)
 
+piston_protection=
+{this accepts either true or false values)
+(if set to true no furnace block can be pushed or pulled by a piston)
+
 layer_one_blocks=
 (this accepts defined valid block types for the top most layer of the furnace)
 
@@ -172,10 +176,15 @@ Debug=
 Permissions
 ***************************
 *note* case sensitive these must be entered EXACTLY as they are here
-*note* permissions are not required, the plugin will default to OPs if no permissions are detected
+*note* permissions are not required, the plugin fall back to bukkit permissions if no other permissions are detected and
+       server ops if no bukkit permissions are set
 *note* permission checks can be turned off with allow_freeforall=true in the config
 
-lavafurnace.admin.maxForgeOverride         <- overrides the max forge limit for admin or player
+lavafurnace.*                              <- gives all admin permissions + chest access
+lavafurnace.admin.*                        <- gives all admin permissions
+lavafurnace.player.*                       <- gives all player permissions
+
+lavafurnace.admin.maxforgeoverride         <- overrides the max forge limit for admin or player
 
 lavafurnace.player.build                   <- Can build lava furnace
 lavafurnace.admin.build                    <- Can build lava furnace
@@ -192,7 +201,7 @@ lavafurnace.player.destroy                 <- can only destroy their own lava fu
 lavafurnace.admin.use                      <- can use any lava furnace
 lavafurnace.player.use                     <- can only use a lava furnace they create
 
-lavafurnace.chest                          <- can place production chests limited by config
+lavafurnace.chests                         <- can place production chests limited by config
 
 ***************************
 Final notes:
@@ -202,12 +211,12 @@ Here are a few things to remember with the lava furnace. Depending on permission
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
 the furnace will erase. 
 
-However, there are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
-directly. Water and Piston push or pulling at a furnace block.
-So just be sure to keep water and pistons away from the furnace and you will be OK.
+However, there is at least 1 instances I know of were a furnace can be destroyed without a player interaction causing it
+directly. Water flowing into the furnace crucible.
+So just be sure to keep water away from the furnace and you will be OK.
 
-Permissions are not required, the plugin will default over to Server OPs if GroupManager or niji based permissions are not detected.
-Server OPs trumps permissions. So if you have both OPs and Permissions then the Server OPs are Admins in the eyes of the plugin.
+Permissions are not required, the plugin will default over to bukkit permissions if GroupManager or niji based permissions
+are not detected. If no permissions are set at all the plugin will default to Server OPs.
 
 Never directly edit the LavaFurnace Data base. Bad things can happen!
 
