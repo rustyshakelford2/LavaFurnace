@@ -1,5 +1,5 @@
-Lava Furnace 1.38 plugin 
-		For Bukkit Minecraft server version 1000.
+Lava Furnace 1.4 plugin 
+		For Bukkit Minecraft server version 1060.
 by ArcWolf
 		
 ***************************
@@ -21,7 +21,11 @@ matter of time before you possess a lava furnace of your own...
 Commands:
 ***************************
 
-There are not commands really. (well, just the sign... but we'll get to that later)
+/lfadd <username>  <-- adds a user to the list of player furnaces monitored for custom cook times
+/lfrem <username>  <-- removes a user from the list of player furnaces monitored for custom cook times
+/lfset <username> <itemname or itemid> <multiplier 1 - 4>  <-- changes the specified item to the specified multiplier for the specified player
+/lflist <username>  <-- lists a given players custom cook time settings.
+
 
 ***************************
 How to build: (default config)
@@ -68,8 +72,7 @@ From the top down...
 			 *    OOO
 			 *    OOO
 			 * 
-Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the 
-end of the U shaped obsidan square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
+Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the end of the U shaped obsidan square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
 Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x lines you just created. It 
 must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place a sign attached to the obsidian block above the 
 furnace block. On it type [lavafurnace]  braces and all. If everything is done right a lightning bolt will strike the lava furnace crucible and the
@@ -80,6 +83,8 @@ smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
+
+Version 1.4 allows admins to set custom per item cook times for each player. Simply use the provided command either in the in game chat or inside the server console (must be enabled in config).
 
 (Optional)
 Version 1.35 allows production chests to be placed closer to the furnace block if belt blocks are set to 0 in the config(ie. turned off)
@@ -149,6 +154,10 @@ piston_protection=
 {this accepts either true or false values)
 (if set to true no furnace block can be pushed or pulled by a piston)
 
+console_commands=
+{this accepts either true or false values)
+(if set to true admins are allowed to enter LavaFurnace commands into the server console)
+
 layer_one_blocks=
 (this accepts defined valid block types for the top most layer of the furnace)
 
@@ -203,6 +212,16 @@ lavafurnace.player.use                     <- can only use a lava furnace they c
 
 lavafurnace.chests                         <- can place production chests limited by config
 
+lavafurnace.admin.lfadd                    <- can add users to the custom cook time database
+
+lavafurnace.admin.lfrem                    <- can remove users from the custom cook time database
+
+lavafurnace.admin.lfset                    <- can change a users custom cook time settings
+
+lavafurnace.admin.lflist                   <- can list ANY players custom cook time settings
+
+lavafurnace.player.lflist                  <- can ONLY list their own custom cook time settings
+
 ***************************
 Final notes:
 ***************************
@@ -211,14 +230,14 @@ Here are a few things to remember with the lava furnace. Depending on permission
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
 the furnace will erase. 
 
-However, there is at least 1 instances I know of were a furnace can be destroyed without a player interaction causing it
-directly. Water flowing into the furnace crucible.
-So just be sure to keep water away from the furnace and you will be OK.
+However, there is are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
+directly. Water or lava flowing into the furnace crucible and not places.
+So just be sure to keep running water/lava away from the furnace and you will be OK.
 
 Permissions are not required, the plugin will default over to bukkit permissions if GroupManager or niji based permissions
 are not detected. If no permissions are set at all the plugin will default to Server OPs.
 
-Never directly edit the LavaFurnace Data base. Bad things can happen!
+Never directly edit the LavaFurnace Database or player database. Bad things can happen!
 
 If something gets messed up with any of the data files. Delete the LavaFurnace directory and Lava Furnace plugin will recreate
 everything to default values.
@@ -234,6 +253,9 @@ detection methods.
 
 Only the blocks defined in the config constitute a valid furnace. If a furnace was created with some other block setup then
 that furnace will be invalid if the blocks are changed in the config.
+
+To edit (/lfset) a players custom cook time settings the player must have already been added to the database.
+Valid cook times for lfset are 1, 2, 3, or 4. No decimal values are accepted.
 
 Keep all that in mind and you will be a happy owner of a fancy Lava Furnace!
 
