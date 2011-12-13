@@ -1,5 +1,5 @@
-Lava Furnace 1.4 plugin 
-		For Bukkit Minecraft server version 1060.
+Lava Furnace 1.44 plugin 
+		For Bukkit Minecraft server version 1597.
 by ArcWolf
 		
 ***************************
