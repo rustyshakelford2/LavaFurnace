@@ -1,4 +1,4 @@
-Lava Furnace 1.44 plugin 
+Lava Furnace 1.45 plugin 
 		For Bukkit Minecraft server version 1597.
 by ArcWolf
 		
@@ -84,6 +84,12 @@ smelt items.
 *Note*
 Contact your system admin for your lavafurnce building requirements.
 
+Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called "custom_smeltables=" it allows any number of comma seperated block id numbers to be used.
+             These custom smeltables are however not able to be assigned custom cook times.
+			 Also, new in the version is production chest smelt priorities. Items placed in the production chest are smelted from TOP LEFT to TOP RIGHT and from TOP to BOTTOM. So, if you place ironore in the
+			 top left corner of the production chest. The furnace will grab ironore and smelt it until there is no more iron ore left. Then move on to the next smeltable from the top left, row after row until 
+			 the chest is empty.
+
 Version 1.4 allows admins to set custom per item cook times for each player. Simply use the provided command either in the in game chat or inside the server console (must be enabled in config).
 
 (Optional)
@@ -158,6 +164,11 @@ console_commands=
 {this accepts either true or false values)
 (if set to true admins are allowed to enter LavaFurnace commands into the server console)
 
+custom_smeltables=
+{this accepts comma separated integer values}
+(any values entered here are accepted as valid smeltable items for a furnace
+regardless of if they actually can be smelted)
+
 layer_one_blocks=
 (this accepts defined valid block types for the top most layer of the furnace)
 
@@ -183,6 +194,7 @@ Debug=
 
 ***************************
 Permissions
+(Groupmanager *1.0(alpha-5) anjocaido, PermissionsEX 1.17 t3hk0d3, BukkitPermissions, and most Niji based permissions supported)
 ***************************
 *note* case sensitive these must be entered EXACTLY as they are here
 *note* permissions are not required, the plugin fall back to bukkit permissions if no other permissions are detected and
@@ -256,6 +268,9 @@ that furnace will be invalid if the blocks are changed in the config.
 
 To edit (/lfset) a players custom cook time settings the player must have already been added to the database.
 Valid cook times for lfset are 1, 2, 3, or 4. No decimal values are accepted.
+
+Any custom smeltable will be accepted in the custom smelt option. However it is very important that if you use this option
+you are sure that the item you are adding to the smelt list is actually smeltable within the game.
 
 Keep all that in mind and you will be a happy owner of a fancy Lava Furnace!
 
