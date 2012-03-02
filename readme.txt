@@ -1,5 +1,5 @@
-Lava Furnace 1.46 plugin 
-		For Bukkit Minecraft server version 1818.
+Lava Furnace 1.471 plugin 
+		For Bukkit Minecraft server version R6 mc1.1.
 by ArcWolf
 		
 ***************************
@@ -83,6 +83,8 @@ smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
+
+Version 1.47 adds lavafurnace.furnacelimit. "groupname" to premissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limites and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
 
 Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called "custom_smeltables=" it allows any number of comma seperated block id numbers to be used.
              These custom smeltables are however not able to be assigned custom cook times.
@@ -233,6 +235,8 @@ lavafurnace.admin.lfset                    <- can change a users custom cook tim
 lavafurnace.admin.lflist                   <- can list ANY players custom cook time settings
 
 lavafurnace.player.lflist                  <- can ONLY list their own custom cook time settings
+
+lavafurnace.furnacelimit.groupname         <- is used to set custom build limits for "groupname" permission
 
 ***************************
 Final notes:
