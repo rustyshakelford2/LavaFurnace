@@ -1,5 +1,4 @@
-Lava Furnace 1.471 plugin 
-		For Bukkit Minecraft server version R6 mc1.1.
+Lava Furnace 
 by ArcWolf
 		
 ***************************
@@ -83,6 +82,7 @@ smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
+Version 1.5 adds severial new features, an ability to use the source chest as a fuel source and the ability to get redstone outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucable or lava in the source chest)
 
 Version 1.47 adds lavafurnace.furnacelimit. "groupname" to premissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limites and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
 
@@ -149,6 +149,10 @@ allow_freeforall_chests=
 (this accepts either true or false values)
 (True will disable LavaFurnace permissions checks for opening chests only)
 
+allow_source_chest_fuel=
+(the accepts either true or false valuse)
+(True will allow lavafurnace to check the source chest for fuel items)
+
 use_large_chests=
 (this accepts either true or false values)
 (if set to true lavafurnace will use large chest capacity)
@@ -165,6 +169,10 @@ piston_protection=
 console_commands=
 {this accepts either true or false values)
 (if set to true admins are allowed to enter LavaFurnace commands into the server console)
+
+sign_show_fuel_level=
+(this accepts either true or false values)
+(if this is set to true the lavafurnace sign will update with the percentage of lava fuel left in the crucable)
 
 custom_smeltables=
 {this accepts comma separated integer values}
@@ -192,6 +200,10 @@ Debug=
 (4 is for permissions checks)
 (5 is to show exceptions traps)
 (6 is for detailed building debugging *requires admin build permissions)
+
+Compatibility=
+(this is a comma seperated list of plugins that lavafurnace should watch out for and try to be compatable with)
+(use the proper name for the plugins here, the name can be found in the plugin.yml file in their respective jar files)
 
 
 ***************************
@@ -249,6 +261,9 @@ the furnace will erase.
 However, there is are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
 directly. Water or lava flowing into the furnace crucible and not places.
 So just be sure to keep running water/lava away from the furnace and you will be OK.
+
+Compatability mode for now simply stops lavafurnace from outputing a furnace burn event when a user fuels the lavafurnace. This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket
+was used.
 
 Permissions are not required, the plugin will default over to bukkit permissions if GroupManager or niji based permissions
 are not detected. If no permissions are set at all the plugin will default to Server OPs.
