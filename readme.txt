@@ -179,6 +179,11 @@ custom_smeltables=
 (any values entered here are accepted as valid smeltable items for a furnace
 regardless of if they actually can be smelted)
 
+custom_fuel=
+{this accepts comma separated integer values}
+(any values entered here are accepted as valid fuel items for a furnace
+regardless of if they actually are fuels)
+
 layer_one_blocks=
 (this accepts defined valid block types for the top most layer of the furnace)
 
