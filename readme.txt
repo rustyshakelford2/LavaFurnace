@@ -99,11 +99,11 @@ Version 1.35 allows production chests to be placed closer to the furnace block i
 Example above.
 
 New in version 1.3 is the ability to customize what blocks your furnace uses for construction. Valid blocks are in 
-a seperate file located in the zip file this plugin came in.
+a separate file located in the zip file this plugin came in.
 Lava Furnace will use large production chests if turned on in config.
-If you set a cook time faster then normal. Then you can not use alternate fuels in the furnace as still recieve the enhanced cook time.
+If you set a cook time faster then normal. Then you can not use alternate fuels in the furnace as still receive the enhanced cook time.
 IE. If you set cook time to 4x as fast and put coal into the lava furnace. You will only get normal cook times. Remove the coal. 4x as fast cook time.
-Capitilization of the permissions nodes have been removed. Please make the necessary changes. LavaFurnace should now be lavafurnace.
+Capitalization of the permissions nodes have been removed. Please make the necessary changes. LavaFurnace should now be lavafurnace.
 
 New in version 1.2 are the production chests. These chests are optional addons to the lavafurnace.
 If a user has permission and the server has this function enabled you may place a chest to either
@@ -150,7 +150,7 @@ allow_freeforall_chests=
 (True will disable LavaFurnace permissions checks for opening chests only)
 
 allow_source_chest_fuel=
-(the accepts either true or false valuse)
+(the accepts either true or false values)
 (True will allow lavafurnace to check the source chest for fuel items)
 
 use_large_chests=
@@ -160,7 +160,7 @@ use_large_chests=
 explosion_proof=
 (this accepts either true or false values)
 (if set to true the furnace can not be damaged by explosions)
-(Protection in a 7 block radious from the center of the furnace)
+(Protection in a 7 block radius from the center of the furnace)
 
 piston_protection=
 {this accepts either true or false values)
@@ -172,7 +172,7 @@ console_commands=
 
 sign_show_fuel_level=
 (this accepts either true or false values)
-(if this is set to true the lavafurnace sign will update with the percentage of lava fuel left in the crucable)
+(if this is set to true the lavafurnace sign will update with the percentage of lava fuel left in the crucible)
 
 custom_smeltables=
 {this accepts comma separated integer values}
@@ -207,7 +207,7 @@ Debug=
 (6 is for detailed building debugging *requires admin build permissions)
 
 Compatibility=
-(this is a comma seperated list of plugins that lavafurnace should watch out for and try to be compatable with)
+(this is a comma separated list of plugins that lavafurnace should watch out for and try to be compatible with)
 (use the proper name for the plugins here, the name can be found in the plugin.yml file in their respective jar files)
 
 
@@ -267,7 +267,7 @@ However, there is are at least 2 instances I know of were a furnace can be destr
 directly. Water or lava flowing into the furnace crucible and not places.
 So just be sure to keep running water/lava away from the furnace and you will be OK.
 
-Compatability mode for now simply stops lavafurnace from outputing a furnace burn event when a user fuels the lavafurnace. This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket
+Compatibility mode for now simply stops lavafurnace from outputting a furnace burn event when a user fuels the lavafurnace. This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket
 was used.
 
 Permissions are not required, the plugin will default over to bukkit permissions if GroupManager or niji based permissions
@@ -278,7 +278,7 @@ Never directly edit the LavaFurnace Database or player database. Bad things can 
 If something gets messed up with any of the data files. Delete the LavaFurnace directory and Lava Furnace plugin will recreate
 everything to default values.
 
-If you dont use permissions and dont want to mess with OPS then you may disabled LavaFurnace permissions checks entirely with
+If you don't use permissions and don't want to mess with OPS then you may disabled LavaFurnace permissions checks entirely with
 the allow_freeforall option in the config. Set it to true will allow anyone to create, use, fuel, and destroy any LavaFurnace.
 
 Production chests can be placed closer to the furnace if the belt blocks are turned off. They will also work in the default
