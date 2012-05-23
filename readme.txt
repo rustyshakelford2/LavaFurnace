@@ -71,7 +71,7 @@ From the top down...
 			 *    OOO
 			 *    OOO
 			 * 
-Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the end of the U shaped obsidan square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
+Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the end of the U shaped obsidian square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
 Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x lines you just created. It 
 must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place a sign attached to the obsidian block above the 
 furnace block. On it type [lavafurnace]  braces and all. If everything is done right a lightning bolt will strike the lava furnace crucible and the
@@ -82,11 +82,11 @@ smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
-Version 1.5 adds severial new features, an ability to use the source chest as a fuel source and the ability to get redstone outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucable or lava in the source chest)
+Version 1.5 adds several new features, an ability to use the source chest as a fuel source and the ability to get redstone outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
 
-Version 1.47 adds lavafurnace.furnacelimit. "groupname" to premissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limites and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
+Version 1.47 adds lavafurnace.furnacelimit. "groupname" to permissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limits and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
 
-Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called "custom_smeltables=" it allows any number of comma seperated block id numbers to be used.
+Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called "custom_smeltables=" it allows any number of comma separated block id numbers to be used.
              These custom smeltables are however not able to be assigned custom cook times.
 			 Also, new in the version is production chest smelt priorities. Items placed in the production chest are smelted from TOP LEFT to TOP RIGHT and from TOP to BOTTOM. So, if you place ironore in the
 			 top left corner of the production chest. The furnace will grab ironore and smelt it until there is no more iron ore left. Then move on to the next smeltable from the top left, row after row until 
