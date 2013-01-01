@@ -82,6 +82,8 @@ smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
+Version 1.6 makes the lava furnace a little smarter by using crucible lava fuel only when something needs smelted. Also a fully lava fueled furnace will no longer burn through fuel if the chunks it is in are unloaded
+
 Version 1.5 adds several new features, an ability to use the source chest as a fuel source and the ability to get redstone outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
 
 Version 1.47 adds lavafurnace.furnacelimit. "groupname" to permissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limits and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
@@ -179,6 +181,10 @@ custom_smeltables=
 (any values entered here are accepted as valid smeltable items for a furnace
 regardless of if they actually can be smelted)
 
+use_smartFurnace=
+(This accepts either true of false values)
+(If set to false the furnace will burn lava fuel from the crucible even if nothing needs smelting)
+
 custom_fuel=
 {this accepts comma separated integer values}
 (any values entered here are accepted as valid fuel items for a furnace
@@ -262,10 +268,6 @@ Final notes:
 Here are a few things to remember with the lava furnace. Depending on permissions a lava furnace can only be destroyed by
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
 the furnace will erase. 
-
-However, there is are at least 2 instances I know of were a furnace can be destroyed without a player interaction causing it
-directly. Water or lava flowing into the furnace crucible and not places.
-So just be sure to keep running water/lava away from the furnace and you will be OK.
 
 Compatibility mode for now simply stops lavafurnace from outputting a furnace burn event when a user fuels the lavafurnace. This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket
 was used.
