@@ -73,11 +73,13 @@ From the top down...
 			 *    OOO
 			 *    OOO
 			 * 
-Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the end of the U shaped obsidian square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
-Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x
-lines you just created. It must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place
-a sign attached to the obsidian block above the furnace block. On it type [lavafurnace]  braces and all. If everything is
-done right a lightning bolt will strike the lava furnace crucible and the sign text will turn white. 
+Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape
+in obsidian with the furnace facing out in the end of the U shaped obsidian square. Next surround the U with cobblestone
+stairs. Then top the whole thing off with two rows of 3 obsidian each. Leave a 1x by 3x gap between the two rows of
+obsidian. Next, place a glass block directly between the two obsidian 1x3x lines you just created. It must be placed to
+the RIGHT of the furnace that is on the second level. Lastly you need to place a sign attached to the obsidian block above
+the furnace block. On it type [lavafurnace]  braces and all. If everything is done right a lightning bolt will strike the
+lava furnace crucible and the sign text will turn white. 
 
 If that happens you can now fill the crucible with lava. The glass door will move over the lava and the furnace will ignite
 and become ready to smelt items.
@@ -88,7 +90,8 @@ Version 1.6 makes the lava furnace a little smarter by using crucible lava fuel 
 fully lava fueled furnace will no longer burn through fuel if the chunks it is in are unloaded
 
 Version 1.5 adds several new features, an ability to use the source chest as a fuel source and the ability to get redstone
-outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
+outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava.
+IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
 
 Version 1.47 adds lavafurnace.furnacelimit. "groupname" to permissions. This allows the admin to assign users to specific
 groups. These groups are then assigned a their own furnace build limits. These limits and their groups names are located
