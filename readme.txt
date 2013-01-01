@@ -5,16 +5,18 @@ by ArcWolf
 Story: (because isn't it nice to have a immersing backstory?)
 ***************************
 
-	It was dark... Really dark... the sounds of dripping water echoed in the distance. You curse as you fumble through your pack, trying to find a 
-torch. If that stupid zombie hadn't been there you wouldn't have stumbled over the cliff edge. You strike your flint... Once... twice... Then you 
-notice something. Way in the back of this dank hole something briefly catches the light. Finally, the fire springs to life at the head of the torch. 
-As your eyes adjust to the light you make your way over to the ruins of an ancient furnace. Someone long ago worked here. It almost looks like this 
-used to be a smiths forge. Long forgotten and slowly rotting away like the zombie you encountered moments earlier. As you look around the wreckage 
-you come across a battered and warn workbench. Some half destroyed papers lay covered in dust and scattered about. But one... one piece of paper has 
-drawings... Drawings of what seem to be a new type of furnace. It appears to be the furnace that is here before you. Amazing! you think. This 
-furnace is far more advanced then the furnace you have been using. Just then your stomach growls, reminding you that you were headed back home 
-before your zombie incident. You quickly look about and find a path back up out of the pit. With your new found treasure in your pack its only a 
-matter of time before you possess a lava furnace of your own...
+	It was dark... Really dark... the sounds of dripping water echoed in the distance. You curse as you fumble through your
+pack, trying to find a torch. If that stupid zombie hadn't been there you wouldn't have stumbled over the cliff edge. You
+strike your flint... Once... twice... Then you notice something. Way in the back of this dank hole something briefly
+catches the light. Finally, the fire springs to life at the head of the torch. 
+As your eyes adjust to the light you make your way over to the ruins of an ancient furnace. Someone long ago worked here.
+It almost looks like this used to be a smiths forge. Long forgotten and slowly rotting away like the zombie you encountered
+moments earlier. As you look around the wreckage you come across a battered and warn workbench. Some half destroyed papers
+lay covered in dust and scattered about. But one... one piece of paper has drawings... Drawings of what seem to be a new
+type of furnace. It appears to be the furnace that is here before you. Amazing! you think. This furnace is far more
+advanced then the furnace you have been using. Just then your stomach growls, reminding you that you were headed back home
+before your zombie incident. You quickly look about and find a path back up out of the pit. With your new found treasure in
+your pack its only a matter of time before you possess a lava furnace of your own...
 
 ***************************
 Commands:
@@ -22,7 +24,7 @@ Commands:
 
 /lfadd <username>  <-- adds a user to the list of player furnaces monitored for custom cook times
 /lfrem <username>  <-- removes a user from the list of player furnaces monitored for custom cook times
-/lfset <username> <itemname or itemid> <multiplier 1 - 4>  <-- changes the specified item to the specified multiplier for the specified player
+/lfset <username> <itemname or itemid> <multiplier 1 - 10>  <-- changes an item to smelt at the multiplier for a player
 /lflist <username>  <-- lists a given players custom cook time settings.
 
 
@@ -34,8 +36,8 @@ I recommend checking out the YouTube tutorial I quickly threw together. Check it
 
 http://www.youtube.com/watch?v=RKGQ9moXv0I
 
-But if you don't feel like it then here is a basic run down of a furnace in diagram form: Think of it as the papers you found
-in the pit...
+But if you don't feel like it then here is a basic run down of a furnace in diagram form: Think of it as the papers you
+found in the pit...
 
 From the top down...
 
@@ -72,40 +74,49 @@ From the top down...
 			 *    OOO
 			 * 
 Under the default config the basic requirements are to place a base of 9 Obsidian blocks for a floor, then create a U shape in obsidian with the furnace facing out in the end of the U shaped obsidian square. Next surround the U with cobblestone stairs. Then top the whole thing off with two rows of 3 obsidian each. 
-Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x lines you just created. It 
-must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place a sign attached to the obsidian block above the 
-furnace block. On it type [lavafurnace]  braces and all. If everything is done right a lightning bolt will strike the lava furnace crucible and the
-sign text will turn white. 
+Leave a 1x by 3x gap between the two rows of obsidian. Next, place a glass block directly between the two obsidian 1x3x
+lines you just created. It must be placed to the RIGHT of the furnace that is on the second level. Lastly you need to place
+a sign attached to the obsidian block above the furnace block. On it type [lavafurnace]  braces and all. If everything is
+done right a lightning bolt will strike the lava furnace crucible and the sign text will turn white. 
 
-If that happens you can now fill the crucible with lava. The glass door will move over the lava and the furnace will ignite and become ready to
-smelt items.
+If that happens you can now fill the crucible with lava. The glass door will move over the lava and the furnace will ignite
+and become ready to smelt items.
 
 *Note*
 Contact your system admin for your lavafurnce building requirements.
-Version 1.6 makes the lava furnace a little smarter by using crucible lava fuel only when something needs smelted. Also a fully lava fueled furnace will no longer burn through fuel if the chunks it is in are unloaded
+Version 1.6 makes the lava furnace a little smarter by using crucible lava fuel only when something needs smelted. Also a
+fully lava fueled furnace will no longer burn through fuel if the chunks it is in are unloaded
 
-Version 1.5 adds several new features, an ability to use the source chest as a fuel source and the ability to get redstone outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
+Version 1.5 adds several new features, an ability to use the source chest as a fuel source and the ability to get redstone
+outputs from the furnace. One thing to note, the redstone output for fuel only outputs when the furnace is fueled by lava. IE a lavafurnace fuel cycle(lava in the crucible or lava in the source chest)
 
-Version 1.47 adds lavafurnace.furnacelimit. "groupname" to permissions. This allows the admin to assign users to specific groups. These groups are then assigned a their own furnace build limits. These limits and their groups names are located in the usergroups.ini More examples are explained in the usergroups.ini file.
+Version 1.47 adds lavafurnace.furnacelimit. "groupname" to permissions. This allows the admin to assign users to specific
+groups. These groups are then assigned a their own furnace build limits. These limits and their groups names are located
+in the usergroups.ini More examples are explained in the usergroups.ini file.
 
-Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called "custom_smeltables=" it allows any number of comma separated block id numbers to be used.
-             These custom smeltables are however not able to be assigned custom cook times.
-			 Also, new in the version is production chest smelt priorities. Items placed in the production chest are smelted from TOP LEFT to TOP RIGHT and from TOP to BOTTOM. So, if you place ironore in the
-			 top left corner of the production chest. The furnace will grab ironore and smelt it until there is no more iron ore left. Then move on to the next smeltable from the top left, row after row until 
-			 the chest is empty.
+Version 1.45 allows admins to set up custom smeltable items for production chests. The config has an option called
+"custom_smeltables=" it allows any number of comma separated block id numbers to be used.
+These custom smeltables are however not able to be assigned custom cook times.
+Also, new in the version is production chest smelt priorities. Items placed in the production chest are smelted from
+TOP LEFT to TOP RIGHT and from TOP to BOTTOM. So, if you place ironore in the top left corner of the production chest.
+The furnace will grab ironore and smelt it until there is no more iron ore left. Then move on to the next smeltable
+from the top left, row after row until the chest is empty.
 
-Version 1.4 allows admins to set custom per item cook times for each player. Simply use the provided command either in the in game chat or inside the server console (must be enabled in config).
+Version 1.4 allows admins to set custom per item cook times for each player. Simply use the provided command either in the
+in game chat or inside the server console (must be enabled in config).
 
 (Optional)
-Version 1.35 allows production chests to be placed closer to the furnace block if belt blocks are set to 0 in the config(ie. turned off)
-Example above.
+Version 1.35 allows production chests to be placed closer to the furnace block if belt blocks are set to 0 in the
+config(ie. turned off) Example above.
 
 New in version 1.3 is the ability to customize what blocks your furnace uses for construction. Valid blocks are in 
 a separate file located in the zip file this plugin came in.
 Lava Furnace will use large production chests if turned on in config.
-If you set a cook time faster then normal. Then you can not use alternate fuels in the furnace as still receive the enhanced cook time.
-IE. If you set cook time to 4x as fast and put coal into the lava furnace. You will only get normal cook times. Remove the coal. 4x as fast cook time.
-Capitalization of the permissions nodes have been removed. Please make the necessary changes. LavaFurnace should now be lavafurnace.
+If you set a cook time faster then normal. Then you can not use alternate fuels in the furnace as still receive the
+enhanced cook time.
+IE. If you set cook time to 4x as fast and put coal into the lava furnace. You will only get normal cook times. Remove
+the coal. 4x as fast cook time. Capitalization of the permissions nodes have been removed. Please make the necessary
+changes. LavaFurnace should now be lavafurnace.
 
 New in version 1.2 are the production chests. These chests are optional addons to the lavafurnace.
 If a user has permission and the server has this function enabled you may place a chest to either
@@ -118,7 +129,8 @@ this chest when the furnace completes its processing.
 Config File:
 ***************************
 
-The config file defaults are set up for balance right now. However, if you want to change things up here is what each option means.
+The config file defaults are set up for balance right now. However, if you want to change things up here is what each
+option means.
 
 
 lava_furnace_timer=
@@ -269,8 +281,8 @@ Here are a few things to remember with the lava furnace. Depending on permission
 its owner. If any part of the lava furnace is broke the crucible will empty and the furnace will shut off. The sign over
 the furnace will erase. 
 
-Compatibility mode for now simply stops lavafurnace from outputting a furnace burn event when a user fuels the lavafurnace. This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket
-was used.
+Compatibility mode for now simply stops lavafurnace from outputting a furnace burn event when a user fuels the lavafurnace. 
+This is so plugins that like to return lavabuckets wont erroneously return a bucket when no bucket was used.
 
 Permissions are not required, the plugin will default over to bukkit permissions if GroupManager or niji based permissions
 are not detected. If no permissions are set at all the plugin will default to Server OPs.
